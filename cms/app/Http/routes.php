@@ -11,6 +11,7 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,7 +35,10 @@ Route::get('admin/posts/example', array('as' => 'admin.home', function() {
 	return "this url is: " . $url;
 
 }));
+*/
 
+// Route::get('/post/{id}', 'PostsController@index');
+Route::resource('posts', 'PostsController');
 
 Route::group(['middleware' => ['web']], function() {
 
